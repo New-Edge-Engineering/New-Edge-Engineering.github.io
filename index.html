@@ -1,7 +1,153 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+<html ng-app="neel" ng-controller="AppCtrl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <title ng-bind="pageTitle"></title>
+
+        <!-- social media tags -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@newedgeengineer" />
+        <meta name="twitter:title" content="New Edge Engineering Limited" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:creator" content="@newedgeengineer" />
+        <meta name="twitter:image:src" content="" />
+        <meta property="og:title" content="New Edge Engineering Limited" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://www.newedgeengineering.com/" />
+        <meta property="og:image" content="" />
+        <meta property="og:description" content="" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <meta name="description" content="" />
+        <!-- Place favicon.ico (with ? to ensure firefox pick this up) and apple-touch-icon.png in the root directory -->
+        <link rel="shortcut icon" href="favicon.ico?">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <!-- font awesome from BootstrapCDN -->
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+
+        <!-- compiled CSS -->
+
+        <link rel="stylesheet" type="text/css" href="yet-another-angularjs-seed-16.06.0.css" />
+
+
+        <!-- compiled JavaScript -->
+
+        <script type="text/javascript" src="vendor/angular/angular.js"></script>
+
+        <script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+        <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+
+        <script type="text/javascript" src="vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js"></script>
+
+        <script type="text/javascript" src="app/about/about.js"></script>
+
+        <script type="text/javascript" src="app/app.js"></script>
+
+        <script type="text/javascript" src="app/clients/clients.js"></script>
+
+        <script type="text/javascript" src="app/contact/contact.js"></script>
+
+        <script type="text/javascript" src="app/home/home.js"></script>
+
+        <script type="text/javascript" src="app/passion/passion.js"></script>
+
+        <script type="text/javascript" src="common/plusOne/plusOne.js"></script>
+
+        <script type="text/javascript" src="templates-app.js"></script>
+
+        <script type="text/javascript" src="templates-common.js"></script>
+
+        <script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+        <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+
+        <script type="text/javascript" src="vendor/angular/angular.js"></script>
+
+        <script type="text/javascript" src="vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js"></script>
+
+
+        <!-- it's stupid to have to load it here, but this is for the +1 button -->
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+            { "parsetags": "explicit" }
+        </script>
+
+        <!-- Segment Analytics (https://segment.com/): change XXXXXXXXXXXXXXX to be your project write key. -->
+        <script type="text/javascript">
+!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics;};};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e);}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n);};analytics.SNIPPET_VERSION="3.1.0";
+analytics.load("ueRTHEuLSmyMO1cvVesV5iuD4FecoBdk");
+analytics.page();
+}}();
+        </script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" ng-init="menuCollapsed = true" ng-click="menuCollapsed = ! menuCollapsed">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-brand">
+                        New Edge Engineering Ltd
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" collapse="menuCollapsed">
+                    <ul class="nav navbar-nav">
+                        <li ui-sref-active="active">
+                            <a class="hidden-xs hidden-sm" href ui-sref="about"> <i class="fa fa-home"></i> About </a>
+                            <a class="hidden-md hidden-lg" href ui-sref="about" ng-click="menuCollapsed = ! menuCollapsed"> <i class="fa fa-home"></i> About </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a class="hidden-xs hidden-sm"  href ui-sref="passion"> <i class="fa fa-info-circle"></i> Passion </a>
+                            <a class="hidden-md hidden-lg" href ui-sref="passion" ng-click="menuCollapsed = ! menuCollapsed"> <i class="fa fa-info-circle"></i> Passion </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a class="hidden-xs hidden-sm" href ui-sref="clients"> <i class="fa fa-info-circle"></i> Clients </a>
+                            <a class="hidden-md hidden-lg" href ui-sref="clients" ng-click="menuCollapsed = ! menuCollapsed"> <i class="fa fa-info-circle"></i> Clients </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a class="hidden-xs hidden-sm" href ui-sref="contact"> <i class="fa fa-info-circle"></i> Contact </a>
+                            <a class="hidden-md hidden-lg" href ui-sref="contact" ng-click="menuCollapsed = ! menuCollapsed"> <i class="fa fa-info-circle"></i> Contact </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container body" ui-view="main"></div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-inner row">
+                    <p class="col-xs-12 col-sm-12 col-md-9">
+                        (c) 2015 <a href="http://www.newedgeengineering.com">New EdgeEngineering Ltd</a>. A registered as a private limited company in England & Wales No: 06846079, VAT: 973 0618 12
+                    </p>
+                    <ul class="social hidden-xs hidden-sm col-md-3">
+                        <li>
+                            <a target="_blank" href="https://www.google.com/+NewedgeengineeringLimited"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://twitter.com/newedgeengineer"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.linkedin.com/company/new-edge-engineering-ltd"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://github.com/New-Edge-Engineering/"><i class="fa fa-github"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>
