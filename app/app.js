@@ -16,6 +16,7 @@ angular.module( 'neel', [
 })
 
 .controller( 'AppCtrl', ['$scope', '$location', function AppCtrl ( $scope, $location ) {
+  $scope.date = new Date();
   $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
     if ( angular.isDefined( toState.data.pageTitle ) ) {
       $scope.pageTitle = toState.data.pageTitle + ' | New Edge Engineering Limited' ;
