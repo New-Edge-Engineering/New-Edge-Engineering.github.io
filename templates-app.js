@@ -4,12 +4,10 @@ angular.module("about/about.tpl.html", []).run(["$templateCache", function($temp
   $templateCache.put("about/about.tpl.html",
     "<div class=\"row\">\n" +
     "    <h1 class=\"page-header\">Since 2009...</h1>\n" +
-    "    <p>\n" +
-    "        ...we have been providing technology consultancy, <a href=\"#/technologies\">solutions</a>, training and production to a variety of <a href=\"#/clients\">clients</a>. Helping them to bring to life their vision of a rich media experience. Tho we have not existing for very long, we do have over ten years of experience helping companies create their digital presence in many forms including interactive television, websites and mobile devices. We also believe in helping people to understand stand their technical options and the solutions that can be applied to create their digital presence that will allow our clients' customers to get the best the experience of our client's products and services.\n" +
-    "    </p>\n" +
-    "    <p class=\"quote\">\n" +
-    "        We work at the fore front of technology allowing us to make peoples dreams and visions become a reality.\n" +
-    "    </p>\n" +
+    "    <p>...we have been providing technology consultancy, <a href=\"#/technologies\">solutions</a>, training and production to a variety of <a href=\"#/clients\">clients</a>. Helping them to bring to life their vision of a rich media experience. Tho we have not existing for very long, we do have over ten years of experience helping companies create their digital presence in many forms including interactive television, websites and mobile devices. We also believe in helping people to understand stand their technical options and the solutions that can be applied to create their digital presence that will allow our clients' customers to get the best the experience of our client's products and services.</p>\n" +
+    "    <blockquote>\n" +
+    "        <p>We work at the fore front of technology allowing us to make peoples dreams and visions become a reality.</p>\n" +
+    "    </blockquote>\n" +
     "</div>\n" +
     "\n" +
     "");
