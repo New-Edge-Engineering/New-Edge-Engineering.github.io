@@ -18,22 +18,22 @@ angular.module("clients/clients.tpl.html", []).run(["$templateCache", function($
     "<div class=\"row clients\">\n" +
     "    <h1 class=\"page-header\">We Have Helped</h1>\n" +
     "    <div class=\"row text-center\">\n" +
-    "        <div class=\"col-md-4\"><img src=\"clients/nativ.png\" width=\"100\" height=\"46\" title=\"Nativ\" /></div>\n" +
-    "        <div class=\"col-md-4\"><img src=\"clients/sky.png\" width=\"100\" height=\"60\" title=\"Sky\" /></div>\n" +
-    "        <div class=\"col-md-4\"><img src=\"clients/streamingtank.png\" width=\"100\" height=\"38\" title=\"Streaming Tank\"/></div>\n" +
+    "        <div class=\"col-sm-4\"><img src=\"clients/incopro.png\" width=\"100\" height=\"60\" title=\"Incopro\"/></div>\n" +
+    "        <div class=\"col-sm-4\"><img src=\"clients/blackwells.png\" width=\"60\" height=\"60\" title=\"Blackwells Learning\"/></div>\n" +
+    "        <div class=\"col-sm-4\"><img src=\"clients/orange-digital.jpg\" width=\"60\" height=\"60\" title=\"Orange Digital\"/></div>\n" +
     "    </div>\n" +
     "    <div class=\"row text-center\">\n" +
-    "        <div class=\"col-md-4\"><img src=\"clients/wazoku.png\" width=\"100\" height=\"60\" title=\"Wazoku\" /></div>\n" +
-    "        <div class=\"col-md-4\"><img src=\"clients/77pr.png\" width=\"64\" height=\"60\" title=\"SeventySeven PR\"/></div>\n" +
-    "        <div class=\"col-md-4\"><img src=\"clients/imagination.png\" width=\"100\" height=\"24\" title=\"Imagination\"/></div>\n" +
+    "        <div class=\"col-sm-4\"><img src=\"clients/momentum.png\" width=\"60\" height=\"60\" title=\"Momentum\"/></div>\n" +
+    "        <div class=\"col-sm-4\"><img src=\"clients/imagination.png\" width=\"100\" height=\"24\" title=\"Imagination\"/></div>\n" +
+    "        <div class=\"col-sm-4\"><img src=\"clients/77pr.png\" width=\"64\" height=\"60\" title=\"SeventySeven PR\"/></div>\n" +
     "    </div>\n" +
     "    <div class=\"row text-center\">\n" +
-    "        <div class=\"col-md-4\"><img src=\"clients/momentum.png\" width=\"60\" height=\"60\" title=\"Momentum\"/></div>\n" +
-    "        <div class=\"col-md-4\"><img src=\"clients/orange-digital.jpg\" width=\"60\" height=\"60\" title=\"Orange Digital\"/></div>\n" +
-    "        <div class=\"col-md-4\"><img src=\"clients/blackwells.png\" width=\"60\" height=\"60\" title=\"Blackwells Learning\"/></div>\n" +
+    "        <div class=\"col-sm-4\"><img src=\"clients/wazoku.png\" width=\"100\" height=\"60\" title=\"Wazoku\" /></div>\n" +
+    "        <div class=\"col-sm-4\"><img src=\"clients/streamingtank.png\" width=\"100\" height=\"38\" title=\"Streaming Tank\"/></div>\n" +
+    "        <div class=\"col-sm-4\"><img src=\"clients/sky.png\" width=\"100\" height=\"60\" title=\"Sky\" /></div>\n" +
     "    </div>\n" +
     "    <div class=\"row text-center\">\n" +
-    "        <div class=\"col-md-12\"><img src=\"clients/incopro.png\" width=\"100\" height=\"60\" title=\"Incopro\"/></div>\n" +
+    "        <div class=\"col-sm-12\"><img src=\"clients/nativ.png\" width=\"100\" height=\"46\" title=\"Nativ\" /></div>\n" +
     "    </div>\n" +
     "</div>\n" +
     "\n" +
