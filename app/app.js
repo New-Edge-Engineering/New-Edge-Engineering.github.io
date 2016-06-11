@@ -1,4 +1,5 @@
 angular.module( 'neel', [
+  'segmentio',
   'templates-app',
   'templates-common',
   'neel.about',
@@ -12,8 +13,9 @@ angular.module( 'neel', [
   $urlRouterProvider.otherwise( '/about' );
 }])
 
-.run( function run () {
-})
+.run( ['segmentio', function run (segmentio) {
+  segmentio.load('ueRTHEuLSmyMO1cvVesV5iuD4FecoBdk');
+}])
 
 .controller( 'AppCtrl', ['$scope', '$location', function AppCtrl ( $scope, $location ) {
   $scope.date = new Date();
