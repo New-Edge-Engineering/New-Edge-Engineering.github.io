@@ -36,13 +36,17 @@
 
         <!-- compiled JavaScript -->
 
-        <script type="text/javascript" src="vendor/angular/angular.js"></script>
+        <script type="text/javascript" src="vendor/angular/angular.min.js"></script>
 
         <script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 
+        <script type="text/javascript" src="vendor/angular-consent/dist/angular-consent.min.js"></script>
+
+        <script type="text/javascript" src="vendor/angular-cookies/angular-cookies.min.js"></script>
+
         <script type="text/javascript" src="vendor/angular-segmentio/angular-segmentio.js"></script>
 
-        <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+        <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
 
         <script type="text/javascript" src="vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js"></script>
 
@@ -66,11 +70,15 @@
 
         <script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 
+        <script type="text/javascript" src="vendor/angular-consent/dist/angular-consent.min.js"></script>
+
+        <script type="text/javascript" src="vendor/angular-cookies/angular-cookies.min.js"></script>
+
         <script type="text/javascript" src="vendor/angular-segmentio/angular-segmentio.js"></script>
 
-        <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+        <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
 
-        <script type="text/javascript" src="vendor/angular/angular.js"></script>
+        <script type="text/javascript" src="vendor/angular/angular.min.js"></script>
 
         <script type="text/javascript" src="vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js"></script>
 
@@ -120,8 +128,18 @@
             </div>
         </div>
 
-        <div class="container body" ui-view="main"></div>
+        <div class="body">
+            <div consent data-ng-class="{ 'consent': $consent.hasNotAgreedYet() }">
+                <div class="container">
+                    <div class="row" data-ng-if="$consent.hasNotAgreedYet()">
+                        <p id="consent-copy" class="col-xs-9 col-sm-10">To give you the best possible experience this site uses cookies. Continue to use the site if you agree with this</p>
+                        <p class="col-xs-1 col-sm-1"><button type="button" class="btn btn-link" data-ng-click="$consent.agree();"><span aria-hidden="true">&times;</span></button></p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="container" data-ui-view="main"></div>
+        </div>
         <footer class="footer">
             <div class="container">
                 <div class="footer-inner row">

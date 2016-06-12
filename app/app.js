@@ -1,4 +1,6 @@
 angular.module( 'neel', [
+  'ngCookies',
+  'angularConsent',
   'segmentio',
   'templates-app',
   'templates-common',
