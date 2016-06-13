@@ -58,7 +58,7 @@ angular.module("contact/contact.tpl.html", []).run(["$templateCache", function($
     "<div class=\"row contact\">\n" +
     "    <h1 class=\"page-header\">How To Enquire</h1>\n" +
     "    <div class=\"invert\" data-ng-show=\"capturing\">\n" +
-    "        <p>If you have an enquiry, please don't hesitate to email us at <a href=\"mailto:enquiries@newedgeengineering.com\">enquiries@newedgeengineering.com</a> or fill in the form.</p>\n" +
+    "        <p>If you have an enquiry, please don't hesitate to email us at <a href=\"mailto:enquiries@newedgeengineering.com\">enquiries+link@newedgeengineering.com</a> or fill in the form.</p>\n" +
     "        <!-- https://github.com/dwyl/html-form-send-email-via-google-script-without-server -->\n" +
     "        <div class=\"alert alert-danger alert-dismissible\" role=\"alert\" data-ng-show=\"error\">\n" +
     "            <button type=\"button\" class=\"close\" data-ng-click=\"close()\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n" +
@@ -75,7 +75,7 @@ angular.module("contact/contact.tpl.html", []).run(["$templateCache", function($
     "            </div>\n" +
     "            <div class=\"form-group\">\n" +
     "                <label for=\"email\">Message<span class=\"aui-icon icon-required\"></span></label><br/>\n" +
-    "                <textarea id=\"message\" name=\"message\" rows=\"10\" placeholder=\"j.doe@example.com\" required data-ng-model=\"enquiry.message\"></textarea>\n" +
+    "                <textarea id=\"message\" name=\"message\" rows=\"10\" placeholder=\"How can we help?\" required data-ng-model=\"enquiry.message\"></textarea>\n" +
     "            </div>\n" +
     "            <div class=\"text-right\">\n" +
     "                <button class=\"btn btn-danger btn-lg\" type=\"submit\" data-ng-disabled=\"contact.$valid == false\" data-ng-click=\"send()\"><i class=\"fa fa-paper-plane\"></i> Send</button>\n" +
