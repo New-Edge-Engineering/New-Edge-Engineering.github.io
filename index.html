@@ -33,8 +33,95 @@
 
         <link rel="stylesheet" type="text/css" href="yet-another-angularjs-seed-16.06.0.css" />
 
+    </head>
+    <body>
+        <div class="wrap">
+            <!--[if lt IE 8]>
+                <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" ng-init="menuCollapsed = true" ng-click="menuCollapsed = ! menuCollapsed">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="navbar-brand">
+                            New Edge Engineering Ltd
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse" collapse="menuCollapsed">
+                        <ul class="nav navbar-nav">
+                            <li ui-sref-active="active">
+                                <a class="hidden-xs" href ui-sref="about"> <i class="fa fa-home"></i> About </a>
+                                <a class="hidden-sm hidden-md hidden-lg" href ui-sref="about" ng-click="menuCollapsed = ! menuCollapsed"> <i class="fa fa-home"></i> About </a>
+                            </li>
+                            <li ui-sref-active="active">
+                                <a class="hidden-xs"  href ui-sref="passion"> <i class="fa fa-info-circle"></i> Passion </a>
+                                <a class="hidden-sm hidden-md hidden-lg" href ui-sref="passion" ng-click="menuCollapsed = ! menuCollapsed"> <i class="fa fa-info-circle"></i> Passion </a>
+                            </li>
+                            <li ui-sref-active="active">
+                                <a class="hidden-xs" href ui-sref="clients"> <i class="fa fa-info-circle"></i> Clients </a>
+                                <a class="hidden-sm hidden-md hidden-lg" href ui-sref="clients" ng-click="menuCollapsed = ! menuCollapsed"> <i class="fa fa-info-circle"></i> Clients </a>
+                            </li>
+                            <li ui-sref-active="active">
+                                <a class="hidden-xs" href ui-sref="contact"> <i class="fa fa-info-circle"></i> Contact </a>
+                                <a class="hidden-sm hidden-md hidden-lg" href ui-sref="contact" ng-click="menuCollapsed = ! menuCollapsed"> <i class="fa fa-info-circle"></i> Contact </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-        <!-- compiled JavaScript -->
+            <div class="body">
+                <div consent data-ng-class="{ 'consent': $consent.hasNotAgreedYet() }">
+                    <div class="container">
+                        <div class="row" data-ng-if="$consent.hasNotAgreedYet()">
+                            <p id="consent-copy" class="col-xs-9 col-sm-10">To give you the best possible experience this site uses cookies. Continue to use the site if you agree with this</p>
+                            <p class="col-xs-1 col-sm-1"><button type="button" class="btn btn-link" data-ng-click="$consent.agree();"><span aria-hidden="true">&times;</span></button></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" data-ui-view="main"></div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-inner text-center">
+                    <div class="row">
+                        <div class="hidden-xs col-sm-3 col-md-4 col-lg-4"></div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <ul class="social">
+                            <li>
+                                <a target="_blank" href="https://www.google.com/+NewedgeengineeringLimited"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://twitter.com/newedgeengineer"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.linkedin.com/company/new-edge-engineering-ltd"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://github.com/New-Edge-Engineering/"><i class="fa fa-github"></i></a>
+                            </li>
+                        </ul>
+                        </div>
+                        <div class="hidden-xs col-sm-3 col-md-4 col-lg-4"></div>
+                    </div>
+                    <div class="row">
+                        <div class="hidden-xs hidden-sm col-md-4 col-lg-4"></div>
+                        <p class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                             &copy; 2009 - {{ date|date:'yyyy'}} <a href="http://www.newedgeengineering.com">New EdgeEngineering Ltd</a>.<br />A registered as a private limited company in England & Wales No: 06846079, VAT: 973 0618 12
+                        </p>
+                        <div class="hidden-xs hidden-sm col-md-4 col-lg-4"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+                <!-- compiled JavaScript -->
 
         <script type="text/javascript" src="vendor/angular/angular.min.js"></script>
 
@@ -84,84 +171,8 @@
 
 
         <!-- it's stupid to have to load it here, but this is for the +1 button -->
-        <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js" async defer>
             { "parsetags": "explicit" }
         </script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" ng-init="menuCollapsed = true" ng-click="menuCollapsed = ! menuCollapsed">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <div class="navbar-brand">
-                        New Edge Engineering Ltd
-                    </div>
-                </div>
-                <div class="collapse navbar-collapse" collapse="menuCollapsed">
-                    <ul class="nav navbar-nav">
-                        <li ui-sref-active="active">
-                            <a class="hidden-xs" href ui-sref="about"> <i class="fa fa-home"></i> About </a>
-                            <a class="hidden-sm hidden-md hidden-lg" href ui-sref="about" ng-click="menuCollapsed = ! menuCollapsed"> <i class="fa fa-home"></i> About </a>
-                        </li>
-                        <li ui-sref-active="active">
-                            <a class="hidden-xs"  href ui-sref="passion"> <i class="fa fa-info-circle"></i> Passion </a>
-                            <a class="hidden-sm hidden-md hidden-lg" href ui-sref="passion" ng-click="menuCollapsed = ! menuCollapsed"> <i class="fa fa-info-circle"></i> Passion </a>
-                        </li>
-                        <li ui-sref-active="active">
-                            <a class="hidden-xs" href ui-sref="clients"> <i class="fa fa-info-circle"></i> Clients </a>
-                            <a class="hidden-sm hidden-md hidden-lg" href ui-sref="clients" ng-click="menuCollapsed = ! menuCollapsed"> <i class="fa fa-info-circle"></i> Clients </a>
-                        </li>
-                        <li ui-sref-active="active">
-                            <a class="hidden-xs" href ui-sref="contact"> <i class="fa fa-info-circle"></i> Contact </a>
-                            <a class="hidden-sm hidden-md hidden-lg" href ui-sref="contact" ng-click="menuCollapsed = ! menuCollapsed"> <i class="fa fa-info-circle"></i> Contact </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="body">
-            <div consent data-ng-class="{ 'consent': $consent.hasNotAgreedYet() }">
-                <div class="container">
-                    <div class="row" data-ng-if="$consent.hasNotAgreedYet()">
-                        <p id="consent-copy" class="col-xs-9 col-sm-10">To give you the best possible experience this site uses cookies. Continue to use the site if you agree with this</p>
-                        <p class="col-xs-1 col-sm-1"><button type="button" class="btn btn-link" data-ng-click="$consent.agree();"><span aria-hidden="true">&times;</span></button></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container" data-ui-view="main"></div>
-        </div>
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-inner row">
-                    <p class="col-xs-12 col-sm-12 col-md-9">
-                         &copy; 2009 - {{ date|date:'yyyy'}} <a href="http://www.newedgeengineering.com">New EdgeEngineering Ltd</a>.<br />A registered as a private limited company in England & Wales No: 06846079, VAT: 973 0618 12
-                    </p>
-                    <ul class="social hidden-xs hidden-sm col-md-3">
-                        <li>
-                            <a target="_blank" href="https://www.google.com/+NewedgeengineeringLimited"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="http://twitter.com/newedgeengineer"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="https://www.linkedin.com/company/new-edge-engineering-ltd"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="https://github.com/New-Edge-Engineering/"><i class="fa fa-github"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
     </body>
 </html>

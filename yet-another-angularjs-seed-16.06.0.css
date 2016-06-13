@@ -4844,7 +4844,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   border-color: #001933;
 }
 .navbar-inverse .navbar-brand {
-  color: #9d9d9d;
+  color: #cc0000;
 }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
@@ -7005,6 +7005,13 @@ button.close {
 /**
  * Typography-related.
  */
+body {
+  background-color: #fcfcfc;
+}
+h1,
+h2 {
+  color: #003366;
+}
 /**
  * Typography
  */
@@ -7055,14 +7062,13 @@ h1 {
  * Footer
  */
 .footer {
-  margin-top: 80px;
+  background-color: #eeeeee;
 }
 .footer .footer-inner {
   padding: 40px 0;
   border-top: 1px solid #DDD;
 }
 .social {
-  margin: 0;
   list-style: none;
 }
 .social li {
@@ -7071,7 +7077,7 @@ h1 {
 }
 .social li a,
 .social li a:visited {
-  color: #777777;
+  color: #003366;
   text-decoration: none;
   font-size: 40px;
   -webkit-transition: 250ms ease-in-out;
@@ -7082,12 +7088,76 @@ h1 {
 .social li a:visited:hover {
   color: #555555;
 }
+/* Sticky footer styles ******************************************************/
+html,
+body {
+  height: 100%;
+}
+/* Wrapper for page content to push down footer */
+.wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -224px;
+  /* Pad bottom by footer height */
+  padding: 0 0 224px;
+}
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 224px;
+  background-color: #f5f5f5;
+}
+body > .wrap > .container {
+  padding-top: 224px;
+}
 /**
  * Now that all app-wide styles have been applied, we can load the styles for
  * all the submodules and components we are using.
  *
  * TODO: In a later version of this boilerplate, I'd like to automate this.
  */
-.clients img {
-  margin: 4px;
+.frame {
+  height: 100px;
+  /*can be anything*/
+  width: 100px;
+  /*can be anything*/
+  position: relative;
+  margin: auto;
+}
+img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.contact .page-header {
+  margin-bottom: 0px;
+}
+.contact .invert {
+  background-color: #003366;
+  color: #fcfcfc;
+  margin-left: -100%;
+  margin-right: -100%;
+  padding-left: 100%;
+  padding-right: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.contact .fa-cog {
+  margin-top: 40%;
+}
+.contact textarea {
+  color: #003366;
+  padding: 10px;
+  width: 100%;
 }
