@@ -12,7 +12,7 @@ angular.module("about/about.tpl.html", []).run(["$templateCache", function($temp
     "</div>\n" +
     "    <p>Helping them to bring to life their vision of a rich media experience.</p>\n" +
     "    <p>Our team have over many years of experience helping companies create their digital presence in many forms including interactive television, websites and for mobile devices.</p>\n" +
-    "    <p>We also believe in helping people to understand stand their technical options and the solutions that can be applied to create their digital presence. Which will allow consumers to get the best experience of our client's products and services.</p>\n" +
+    "    <p>We also believe in helping people to understand their technical options and the solutions that can be applied to create their digital presence. Which will allow consumers to get the best experience of our client's products and services.</p>\n" +
     "    <br/>\n" +
     "    <blockquote>\n" +
     "        <p class=\"text-center\">We work at the fore front of technology allowing us to make peoples dreams and visions become a reality.</p>\n" +
@@ -58,7 +58,7 @@ angular.module("contact/contact.tpl.html", []).run(["$templateCache", function($
     "<div class=\"row contact\">\n" +
     "    <h1 class=\"page-header\">How To Enquire</h1>\n" +
     "    <div class=\"invert\" data-ng-show=\"capturing\">\n" +
-    "        <p>If you have an enquiry, please don't hesitate to email us at <a href=\"mailto:enquiries@newedgeengineering.com\">enquiries+link@newedgeengineering.com</a> or fill in the form.</p>\n" +
+    "        <p>If you have an enquiry, please don't hesitate to email us at <a href=\"mailto:enquiries+link@newedgeengineering.com\">enquiries@newedgeengineering.com</a> or fill in the form.</p>\n" +
     "        <!-- https://github.com/dwyl/html-form-send-email-via-google-script-without-server -->\n" +
     "        <div class=\"alert alert-danger alert-dismissible\" role=\"alert\" data-ng-show=\"error\">\n" +
     "            <button type=\"button\" class=\"close\" data-ng-click=\"close()\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n" +
@@ -236,8 +236,8 @@ angular.module("passion/passion.tpl.html", []).run(["$templateCache", function($
     "    <!-- h2>Building Platforms</h2>\n" +
     "    <p></p -->\n" +
     "    <h2>Solution Development</h2>\n" +
-    "    <p>Need to get to market quickly and cheaply? The we can help you achieve this!</p>\n" +
-    "    <p>We working with you to determine the best approach and by selecting the most appropriate third party software that will get your ideas or business to a place that allows you to promote, market and sell.</p>\n" +
+    "    <p>Need to get to market quickly and cheaply? Then we can help you achieve this!</p>\n" +
+    "    <p>We work with you to determine the best approach and by selecting the most appropriate third party software that will get your ideas or business to a place that allows you to promote, market and sell.</p>\n" +
     "    <h2>Services Integration</h2>\n" +
     "    <p>We have specialied in using software and infrastructure created by others and putting them together to create the IT Systems that your business needs to enable you to save money and time.</p>\n" +
     "    <p>Our specialist team creates desktop applications, mobile applications, web sites and web applications using the appropriate technology for the platform that the software is being distributed too.</p>\n" +
