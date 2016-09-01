@@ -30,9 +30,29 @@
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
 
         <!-- compiled CSS -->
+        <noscript id="deferred-styles">
+        <link rel="stylesheet" type="text/css" href="yet-another-angularjs-seed-16.09.0.css" />
+        </noscript>
+        <script>  // <!-- As recommended by google: -->
+var loadDeferredStyles = function() {
+    var addStylesNode = document.getElementById("deferred-styles");
+    var replacement = document.createElement("div");
+    replacement.innerHTML = addStylesNode.textContent;
+    document.body.appendChild(replacement);
+    addStylesNode.parentElement.removeChild(addStylesNode);
+};
+var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+else window.addEventListener('load', loadDeferredStyles);
+        </script>
+        <!-- compiled JavaScript -->
+        <script type="text/javascript" src="vendor/angular/angular.min.js" async defer></script>        <script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js" async defer></script>        <script type="text/javascript" src="vendor/angular-consent/dist/angular-consent.min.js" async defer></script>        <script type="text/javascript" src="vendor/angular-cookies/angular-cookies.min.js" async defer></script>        <script type="text/javascript" src="vendor/angular-segmentio/angular-segmentio.js" async defer></script>        <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.min.js" async defer></script>        <script type="text/javascript" src="vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js" async defer></script>        <script type="text/javascript" src="app/about/about.js" async defer></script>        <script type="text/javascript" src="app/app.js" async defer></script>        <script type="text/javascript" src="app/clients/clients.js" async defer></script>        <script type="text/javascript" src="app/contact/contact.js" async defer></script>        <script type="text/javascript" src="app/home/home.js" async defer></script>        <script type="text/javascript" src="app/passion/passion.js" async defer></script>        <script type="text/javascript" src="common/plusOne/plusOne.js" async defer></script>        <script type="text/javascript" src="templates-app.js" async defer></script>        <script type="text/javascript" src="templates-common.js" async defer></script>        <script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js" async defer></script>        <script type="text/javascript" src="vendor/angular-consent/dist/angular-consent.min.js" async defer></script>        <script type="text/javascript" src="vendor/angular-cookies/angular-cookies.min.js" async defer></script>        <script type="text/javascript" src="vendor/angular-segmentio/angular-segmentio.js" async defer></script>        <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.min.js" async defer></script>        <script type="text/javascript" src="vendor/angular/angular.min.js" async defer></script>        <script type="text/javascript" src="vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js" async defer></script>
 
-        <link rel="stylesheet" type="text/css" href="yet-another-angularjs-seed-16.06.0.css" />
-
+        <!-- it's stupid to have to load it here, but this is for the +1 button -->
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js" async defer>
+            { "parsetags": "explicit" }
+        </script>
     </head>
     <body>
         <div class="wrap">
@@ -121,58 +141,5 @@
                 </div>
             </div>
         </footer>
-                <!-- compiled JavaScript -->
-
-        <script type="text/javascript" src="vendor/angular/angular.min.js"></script>
-
-        <script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-
-        <script type="text/javascript" src="vendor/angular-consent/dist/angular-consent.min.js"></script>
-
-        <script type="text/javascript" src="vendor/angular-cookies/angular-cookies.min.js"></script>
-
-        <script type="text/javascript" src="vendor/angular-segmentio/angular-segmentio.js"></script>
-
-        <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
-
-        <script type="text/javascript" src="vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js"></script>
-
-        <script type="text/javascript" src="app/about/about.js"></script>
-
-        <script type="text/javascript" src="app/app.js"></script>
-
-        <script type="text/javascript" src="app/clients/clients.js"></script>
-
-        <script type="text/javascript" src="app/contact/contact.js"></script>
-
-        <script type="text/javascript" src="app/home/home.js"></script>
-
-        <script type="text/javascript" src="app/passion/passion.js"></script>
-
-        <script type="text/javascript" src="common/plusOne/plusOne.js"></script>
-
-        <script type="text/javascript" src="templates-app.js"></script>
-
-        <script type="text/javascript" src="templates-common.js"></script>
-
-        <script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-
-        <script type="text/javascript" src="vendor/angular-consent/dist/angular-consent.min.js"></script>
-
-        <script type="text/javascript" src="vendor/angular-cookies/angular-cookies.min.js"></script>
-
-        <script type="text/javascript" src="vendor/angular-segmentio/angular-segmentio.js"></script>
-
-        <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
-
-        <script type="text/javascript" src="vendor/angular/angular.min.js"></script>
-
-        <script type="text/javascript" src="vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js"></script>
-
-
-        <!-- it's stupid to have to load it here, but this is for the +1 button -->
-        <script type="text/javascript" src="https://apis.google.com/js/plusone.js" async defer>
-            { "parsetags": "explicit" }
-        </script>
     </body>
 </html>
