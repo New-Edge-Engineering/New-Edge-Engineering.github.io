@@ -11,7 +11,7 @@
         <b-alert variant="danger" dismissable :show="error">
             <span><strong>A problem occurred,</strong> please try again later.</span>
         </b-alert>
-        <form id="gform">
+        <form>
             <div class="form-group">
                 <label for="name">Name<span class="aui-icon icon-required"></span></label>
                 <input class="form-control" id="name" name="name" placeholder="Name" required v-model="enquiry.name" v-on:keyup="validate">
