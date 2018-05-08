@@ -97,24 +97,28 @@ export default {
     send () {
       this.capturing = false;
       this.sending = true;
+      var scope = this;
       axios.post(
         'https://script.google.com/macros/s/AKfycbwlgWtpZWVdq0HgfKPEYlfAK2TeVApv9LIwgOUaLGpycB6GBnw/exec',
+        this.enquiry,
         {
-          body: this.enquiry
+          headers : {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          }
         }
       ).then(function(response){
-        this.enquiry.name = "";
-        this.enquiry.email = "";
-        this.enquiry.message = "";
-        this.sending = false;
-        this.thankyou = true;
+        scope.enquiry.name = "";
+        scope.enquiry.email = "";
+        scope.enquiry.message = "";
+        scope.sending = false;
+        scope.thankyou = true;
       }).catch(function(error){
         // called asynchronously if an error occurs
-        console.debug("failure " + angular.toJson(response));
+        console.debug("failure " + JSON.stringify(error));
         // or server returns response with an error status.
-        this.sending = false;
-        this.error = true;
-        this.capturing = true;
+        scope.sending = false;
+        scope.error = true;
+        scope.capturing = true;
       })
       return false;
     }
