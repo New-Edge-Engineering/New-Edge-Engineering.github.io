@@ -39,11 +39,11 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    analyze: false,
     vendor: [
       'axios',
-      'vuecidity',
       'moment',
-      'vue-moment'
+      'vue-cookie-law',
     ],
     /*
     ** Run ESLint on save
@@ -62,11 +62,11 @@ module.exports = {
 
   plugins: [
     { src: '~plugins/filters.js', ssr: false },
-    { src: '~plugins/vuecidity.js', ssr: false },
     { src: '~plugins/ga.js', ssr: false }
   ],
 
   modules: [
     'bootstrap-vue/nuxt',
+    '@nuxtjs/sitemap',
   ]
 }

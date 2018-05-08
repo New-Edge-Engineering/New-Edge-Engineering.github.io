@@ -14,7 +14,9 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/sitemap": "^0.1.1",
     "axios": "^0.18.0",
+    "vue-cookie-law": "^1.5.0",
     "vue-moment": "^3.2.0",
     "vuecidity": "^1.0.7"
   },

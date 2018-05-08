@@ -20,12 +20,10 @@
         </b-navbar>
 
         <div class="body">
-          <vc-cookie-consent
-            :buttons-dark="false"
-            color="grey l-400"
-            :cookie-days="3652"
-            :dark="false"
-            :read-button="false">To give you the best possible experience this site uses cookies. Continue to use the site if you agree with this</vc-cookie-consent>
+          <no-ssr><cookie-law
+            message="To give you the best possible experience this site uses cookies. Continue to use the site if you agree with this."
+            position="top"
+            theme="blood-orange"></cookie-law></no-ssr>
           <nuxt/>
         </div>
     </div>
@@ -50,14 +48,14 @@
                         </li>
                     </ul>
                     </div>
-                    <div class="hidden-xs col-sm-2 col-md-3 col-lg-4"></div>
+                    <div class="hidden-xs col-sm-2 col-md-3 col-lg-2"></div>
                 </b-row>
                 <b-row>
-                    <div class="hidden-xs hidden-sm col-md-3 col-lg-4"></div>
-                    <p class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="hidden-xs hidden-sm col-md-3 col-lg-1"></div>
+                      <no-ssr><p class="col-xs-12 col-sm-12 col-md-6 col-lg-10">
                          &copy; 2009 - {{ date|moment('YYYY') }} <a href="http://www.newedgeengineering.com">New EdgeEngineering Ltd</a>.<br />A registered as a private limited company in England & Wales No: 06846079, VAT: 973 0618 12
-                    </p>
-                    <div class="hidden-xs hidden-sm col-md-3 col-lg-4"></div>
+                    </p></no-ssr>
+                    <div class="hidden-xs hidden-sm col-md-3 col-lg-1"></div>
                 </b-row>
             </div>
         </div>
@@ -66,10 +64,19 @@
 </template>
 
 <script>
+if (process.browser) {
+  require('vue-cookie-law')
+}
+
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+import CookieLaw from 'vue-cookie-law';
+
 export default {
+  components: {
+    CookieLaw
+  },
   data () {
     return {
       date: new Date()
