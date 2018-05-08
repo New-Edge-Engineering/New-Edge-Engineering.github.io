@@ -72,6 +72,7 @@ module.exports = {
   ],
 
   sitemap: {
-    generate: true
+    generate: true,
+    hostname: 'https://www.newedgeengineering.com',
   }
 };
