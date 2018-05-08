@@ -42,6 +42,7 @@ module.exports = {
     vendor: [
       'axios',
       'vuecidity',
+      'moment',
       'vue-moment'
     ],
     /*
