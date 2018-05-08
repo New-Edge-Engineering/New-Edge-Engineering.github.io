@@ -7,13 +7,13 @@
         <b-navbar toggleable="md">
           <b-container>
             <b-navbar-toggle target="nav_dropdown_collapse"></b-navbar-toggle>
-            <b-navbar-brand><a href="/about">New Edge Engineering Ltd</a></b-navbar-brand>
+            <b-navbar-brand><a href="/about/">New Edge Engineering Ltd</a></b-navbar-brand>
             <b-collapse is-nav id="nav_dropdown_collapse">
               <b-navbar-nav>
-                <b-nav-item to="/about"><i class="fa fa-home"></i> About</b-nav-item>
-                <b-nav-item to="/passion"><i class="fa fa-info-circle"></i> Passion</b-nav-item>
-                <b-nav-item to="/clients"><i class="fa fa-user-circle"></i> Clients </b-nav-item>
-                <b-nav-item to="/contact"><i class="fa fa-envelope"></i> Contact</b-nav-item>
+                <b-nav-item to="/about/"><i class="fa fa-home"></i> About</b-nav-item>
+                <b-nav-item to="/passion/"><i class="fa fa-info-circle"></i> Passion</b-nav-item>
+                <b-nav-item to="/clients/"><i class="fa fa-user-circle"></i> Clients </b-nav-item>
+                <b-nav-item to="/contact/"><i class="fa fa-envelope"></i> Contact</b-nav-item>
               </b-navbar-nav>
             </b-collapse>
           </b-container>
