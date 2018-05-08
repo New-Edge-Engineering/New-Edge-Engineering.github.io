@@ -44,6 +44,7 @@ module.exports = {
       'axios',
       'moment',
       'vue-cookie-law',
+      'query-string',
     ],
     /*
     ** Run ESLint on save

@@ -11,7 +11,7 @@
         <b-alert variant="danger" dismissable :show="error">
             <span><strong>A problem occurred,</strong> please try again later.</span>
         </b-alert>
-        <form>
+        <form id="gform">
             <div class="form-group">
                 <label for="name">Name<span class="aui-icon icon-required"></span></label>
                 <input class="form-control" id="name" name="name" placeholder="Name" required v-model="enquiry.name" v-on:keyup="validate">
@@ -66,6 +66,7 @@
 
 <script>
 import axios from 'axios';
+import querystring from 'query-string'
 
 export default {
   data () {
@@ -77,7 +78,7 @@ export default {
       enquiry: {
         name: '',
         email: '',
-        message: ''
+        message: '',
       },
       disabled: true
     }
@@ -94,31 +95,45 @@ export default {
         this.disabled = true;
       }
     },
+    failed (data) {
+      // called asynchronously if an error occurs
+      console.debug("failure " + JSON.stringify(data));
+      // or server returns response with an error status.
+      this.sending = false;
+      this.error = true;
+      this.capturing = true;
+    },
     send () {
       this.capturing = false;
       this.sending = true;
+      this.enquiry['formDataNameOrder'] = ['name', 'email', 'message'];
+      this.enquiry['formGoogleSheetName'] = "responses";
       var scope = this;
       axios.post(
         'https://script.google.com/macros/s/AKfycbwlgWtpZWVdq0HgfKPEYlfAK2TeVApv9LIwgOUaLGpycB6GBnw/exec',
-        this.enquiry,
+        querystring.stringify(this.enquiry),
         {
           headers : {
             'Content-Type': 'application/x-www-form-urlencoded'
           }
         }
       ).then(function(response){
-        scope.enquiry.name = "";
-        scope.enquiry.email = "";
-        scope.enquiry.message = "";
-        scope.sending = false;
-        scope.thankyou = true;
+        if(response.data.result == "error") {
+          scope.failed(response)
+        } else {
+          scope.enquiry.name = "";
+          scope.enquiry.email = "";
+          scope.enquiry.message = "";
+          scope.sending = false;
+          scope.thankyou = true;
+          setTimeout(function(){
+            scope.error = false;
+            scope.thankyou = false;
+            scope.capturing = true;
+          }, 15000);
+        }
       }).catch(function(error){
-        // called asynchronously if an error occurs
-        console.debug("failure " + JSON.stringify(error));
-        // or server returns response with an error status.
-        scope.sending = false;
-        scope.error = true;
-        scope.capturing = true;
+        scope.failed(error)
       })
       return false;
     }
