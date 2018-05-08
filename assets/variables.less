@@ -1,0 +1,40 @@
+/**
+ * These are the variables used throughout the application. This is where
+ * overwrites that are not specific to components should be maintained.
+ */
+@red: #CC0000;
+@white: #Fcfcfc;
+@blue: #003366;
+
+/** Navigation ***************************************************************/
+@navbar-inverse-bg: @blue;
+@navbar-inverse-link-active-bg: @red;
+@navbar-inverse-brand-color: @red;
+
+/**
+ * Typography-related.
+ */
+
+@sansFontFamily: 'Roboto', sans-serif;
+
+
+/** Taken from bootstrap SCSS ************************************************/
+@gray-base:              #000;
+@gray:                   lighten(@gray-base, 33.5%); // #555
+@gray-light:             lighten(@gray-base, 46.7%); // #777
+@gray-lighter:           lighten(@gray-base, 93.5%); // #eee
+
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+
+
+
+.transition(@transition) {
+  -webkit-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition;
+}
+
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+@grid-float-breakpoint:      @screen-sm-min;
