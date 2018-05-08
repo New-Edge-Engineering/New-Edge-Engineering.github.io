@@ -23,7 +23,8 @@
           <no-ssr><cookie-law
             message="To give you the best possible experience this site uses cookies. Continue to use the site if you agree with this."
             position="top"
-            theme="blood-orange"></cookie-law></no-ssr>
+            theme="blood-orange"
+            transitionName="fade"></cookie-law></no-ssr>
           <nuxt/>
         </div>
     </div>
